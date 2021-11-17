@@ -4,10 +4,12 @@ function PlanetList({title, planets}) {
 
     return <>
         <h2>{title}</h2>
-        {planets.map(planet => (
-            <PlanetCard key={planet.id} planet={planet}/>
-        ))
-        }
+        <div>
+            {planets.map(planet => (
+                <PlanetCard key={planet.id} planet={planet}/>
+            ))
+            }
+        </div>
     </>
 }
 export default PlanetList;
