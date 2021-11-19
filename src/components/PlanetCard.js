@@ -3,13 +3,38 @@ import {Link, useRouteMatch} from "react-router-dom";
 function PlanetCard(props) {
     let match = useRouteMatch();
     let {planet} = props;
+    console.log(props);
     return <>
-        <div>
-            <h3>{planet.id.charAt(0).toUpperCase() + planet.id.slice(1)}</h3>
-            <p>Short planet description</p>
-            <Link to={`${match.url}/${planet.id}`} planet={props}>Discover</Link>
-        </div>
+        <div key={planet.id} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div className="flex-shrink-0">
+                <img className="h-48 w-full object-cover" src={planet.id} alt="" />
+              </div>
+              <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div className="flex-1">
+                  <p className="text-sm font-medium text-indigo-600">
+                    {planet.id.charAt(0).toUpperCase() + planet.id.slice(1)}
+                  </p>
+                  <div>
+                    <p className="text-xl font-semibold text-gray-900">                 
+                    {planet.id.charAt(0).toUpperCase() + planet.id.slice(1)}
+                    </p>
+                    <p className="mt-3 text-base text-gray-500">Short planet description</p>
+                  </div>
+                  <button type="button" className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mt-6">
+                  <Link to={`${match.url}/${planet.id}`} planet={props}>Discover</Link>
+                    </button>
+                </div>
+                </div>
+      </div>
+
     </>
 }
 
 export default PlanetCard;
+
+/* 
+        <div>
+            <h3>{planet.id.charAt(0).toUpperCase() + planet.id.slice(1)}</h3>
+            <p>Short planet description</p>
+        </div>
+        */
