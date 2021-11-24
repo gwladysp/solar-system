@@ -23,8 +23,10 @@ function Planet() {
     }, []);
 
     return <> {planet.length !== 0 ? <>
-        <h1>{planetName.charAt(0).toUpperCase() + planetName.slice(1)}</h1>
-        <img src={'/images/' + planetName + '.svg'} alt={planetName}/>
+        <div className="flex space-between max-w-screen-xl mx-auto">
+            <h1>{planetName.charAt(0).toUpperCase() + planetName.slice(1)}</h1>
+            <img src={'/images/' + planetName + '.svg'} alt={planetName}/>
+        </div>
         <p>Average temperature {planet.avgTemp} K ({(planet.avgTemp - KelvinToCelsius).toFixed(1)} °C)</p>
         <p>Density : {planet.density} g/cm</p>
         <p>Discovered in {planet.discoveryDate} by {planet.discoveredBy}</p>
