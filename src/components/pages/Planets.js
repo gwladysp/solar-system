@@ -27,14 +27,13 @@ function Planets() {
     let dwarfPlanetsList = allPlanets.filter(planet => !planetsNames.includes(planet.id))
 
     return <>
-
-
         <Switch>
             <Route path={`${match.path}/:planetName`}>
                 <Planet/>
             </Route>
             <Route path={`${match.path}/`}>
-                <h1>Solar system planets</h1>
+                <h1 className="app-margin my-20">Solar system planets</h1>
+                <p className="app-margin">Our solar system contains 8 main planets and 6 dward planets.</p>
                 <PlanetList title="Main planets" planets={planetsList}/>
                 <PlanetList title="Dwarf planets" planets={dwarfPlanetsList}/>
             </Route>
