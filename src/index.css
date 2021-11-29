@@ -9,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @apply text-gray-300 bg-blue-dark;
 }
 
 code {
@@ -22,4 +23,12 @@ h1 {
 
 h2 {
   @apply text-3xl;
+}
+
+.app-margin {
+  @apply lg:mx-24;
+}
+
+.planet-info-title {
+  @apply uppercase text-xs font-medium;
 }
