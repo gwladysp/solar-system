@@ -8,14 +8,13 @@ module.exports = {
         blue: {
           light: '#041b3b',
           DEFAULT: '#254594',
-          dark: '#001736'
+          dark: '#001736',
         },
       },
     },
   },
   variants: {
-    extend: {
-    },
+    extend: {},
   },
   plugins: [],
-}
+};
