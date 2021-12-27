@@ -1,4 +1,4 @@
-import HeroSection from './../HeroSection.js';
+import HeroSection from '../components/HeroSection.js';
 
 function Home() {
   return (
