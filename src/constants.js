@@ -9,6 +9,11 @@ const PLANETS_NAMES = [
     'venus'
 ];
 
+export const PLANETS_WITH_RING = [
+    'saturne',
+    'uranus'
+]
+
 let apiFetchAllUrl = 'https://api.le-systeme-solaire.net/rest/bodies/?satisfy=any';
 
 PLANETS_NAMES.forEach(planetName => {
