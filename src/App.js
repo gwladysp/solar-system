@@ -1,10 +1,10 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import Home from './components/pages/Home';
+import Home from './pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Planets from './components/pages/Planets';
-import TheSun from './components/pages/TheSun';
-import TheMoon from './components/pages/TheMoon';
+import Planets from './pages/Planets';
+import TheSun from './pages/TheSun';
+import TheMoon from './pages/TheMoon';
 
 function App() {
   return (

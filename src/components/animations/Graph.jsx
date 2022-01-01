@@ -6,36 +6,38 @@ import {
   Tooltip,
   ResponsiveContainer,
   Cell,
-  Bar,
+  Bar
 } from 'recharts';
+import Loading from "./Loading";
 
-function Graph({ planet, allPlanets }) {
-  const data = allPlanets.bodies;
+function Graph({ planet, allPlanets, dataSorting, dataUnity }) {
+  const data = allPlanets;
+
+  const planetNameFormatter = ( planetName ) => {
+    return planetName.replace(/[0-9]/g, '').trim();
+  }
+
+  if (allPlanets === null) {
+    return <Loading />
+  }
   return (
     <>
-      {allPlanets.length !== 0 ? (
-        <div className="relative left-[-1em]">
+        <div className="relative left-[-1em] mt-16">
           <ResponsiveContainer width="100%" height={300}>
             <ComposedChart width={600} height={300} data={data}>
-              <XAxis dataKey="id" />
+              <XAxis dataKey="englishName" tickFormatter={planetNameFormatter} />
               <YAxis />
               <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-              <Bar dataKey="gravity" barSize={30} fill="#000000">
+              <Bar dataKey={dataSorting} barSize={30} fill="#000000">
                 {data.map((entry, index) => {
-                  if (entry.englishName === planet.englishName) {
-                    return <Cell key={`cell-${index}`} fill="#8884d8" />;
-                  }
-                  return <Cell key={`cell-${index}`} fill="#82ca9d" />;
+                    return <Cell key={`cell-${index}`} fill={entry.englishName === planet.englishName ? "#8884d8" : "#82ca9d"} />;
                 })}
               </Bar>
               <Tooltip />
             </ComposedChart>
           </ResponsiveContainer>
-          <span className="block w-full text-center">All solar system planets density</span>
+          <span className="block w-full text-center">All solar system planets {dataSorting} ({dataUnity})</span>
         </div>
-      ) : (
-        ''
-      )}
     </>
   );
 }
