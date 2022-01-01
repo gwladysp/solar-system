@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply text-gray-300 bg-blue-dark;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1 {
+  @apply text-5xl;
+}
+
+h2 {
+  @apply text-3xl;
+}
+
+.app-margin {
+  @apply lg:mx-24;
+}
+
+.planet-info-title {
+  @apply uppercase text-xs font-medium;
+}
+
+.rotating-planet-container {
+  transform-style: preserve-3d;
+}
+
+.planet,
+.clouds {
+  width: 400px;
+  height: 400px;
+}
+
+.planet {
+  border-radius: 50%;
+  overflow: hidden;
+  animation: translateBackground 30s infinite linear;
+  box-shadow: inset -25px -20px 80px rgba(0, 0, 0, 0.6);
+  background-size: cover;
+}
+
+.clouds {
+  animation: translateBackground 10s infinite linear;
+  opacity: 20%;
+}
+
+@keyframes translateBackground {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 600px;
+  }
+}
+
+.planet-ring {
+  width: 160%;
+  height: 160%;
+  border: solid 60px;
+  opacity: 40%;
+  border-radius: 50%;
+  top: -25%;
+  left: -30%;
+  position: absolute;
+  transform: rotate3d(0.8, 0.2, 0, 75deg);
+  box-sizing: border-box;
+}
+
+.planet-moons:hover {
+  transition: transform 2s;
+  transform: scale(1.25) rotate(360deg);
+}
