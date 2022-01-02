@@ -1,14 +1,12 @@
-import { useEffect, useState } from "react";
 import OrbitingSystem from "../../components/animations/solarSystem/OrbitingSystem";
 import RotatingPlanet from "../../components/animations/RotatingPlanet";
 import Graph from "../../components/animations/Graph";
 import PlanetMainStats from "../../components/elements/PlanetMainStats";
 import PlanetSolarStats from "../../components/elements/PlanetSolarStats";
 import PlanetAdditionalStats from "../../components/elements/PlanetAdditionalStats";
-import { FETCH_ALL_API_URL, FETCH_API_URL } from "../../src/constants";
-import { fetchPlanetsData } from "../../src/resource";
 import Loading from "../../components/animations/Loading";
 import { useRouter } from "next/router";
+import { planets } from "../../data/planets";
 
 function PlanetName() {
   const router = useRouter();
@@ -19,22 +17,13 @@ function PlanetName() {
     return <Loading />;
   }
 
+  let planet = {}
+  if (planets) {
+    planet = planets.find((item) => item.name === planetName);
+  }
+
   const planetNameFormatted =
     planetName.charAt(0).toUpperCase() + planetName.slice(1);
-
-  const planetPromise = fetchPlanetsData(FETCH_API_URL + planetName);
-  const allPlanetsPromise = fetchPlanetsData(FETCH_ALL_API_URL);
-  const [planet, setPlanet] = useState(null);
-  const [allPlanets, setAllPlanets] = useState(null);
-
-  useEffect(() => {
-    planetPromise.then((data) => {
-      setPlanet(data);
-    });
-    allPlanetsPromise.then((data) => {
-      setAllPlanets(data.bodies);
-    });
-  }, []);
 
   if (planet === null) {
     return <Loading />;
@@ -85,7 +74,7 @@ function PlanetName() {
           <h2 className="text-center">
             {planetNameFormatted} into our Solar System
           </h2>
-          <OrbitingSystem planet={planet} allPlanets={allPlanets} />
+          <OrbitingSystem planet={planet} allPlanets={planets} />
           <PlanetSolarStats planet={planet} />
         </div>
 
@@ -93,7 +82,7 @@ function PlanetName() {
           <h2 className="text-center">More statistics</h2>
           <Graph
             planet={planet}
-            allPlanets={allPlanets}
+            allPlanets={planets}
             dataSorting="gravity"
             dataUnity={"m/s"}
           />

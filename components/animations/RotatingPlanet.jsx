@@ -1,7 +1,7 @@
 import { PLANETS_WITH_RING } from "../../src/constants";
 
 function RotatingPlanet({ planet }) {
-  const bgImage = "/images/" + planet.englishName + ".svg";
+  const bgImage = "/images/" + planet.name + ".svg";
   const hasRing = PLANETS_WITH_RING.includes(planet.id);
   const ringColor = {
     uranus: "white",

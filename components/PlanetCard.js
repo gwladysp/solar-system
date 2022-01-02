@@ -2,8 +2,7 @@ import Link from "next/link";
 
 function PlanetCard(props) {
   let { planet } = props;
-  let planetName = planet.englishName.replace(/[0-9]/g, "").trim();
-
+  let planetName = planet.name.replace(/[0-9]/g, "").trim();
   return (
     <>
       <div
@@ -12,7 +11,7 @@ function PlanetCard(props) {
       >
         <div className="flex-shrink-0">
           <img
-            className="h-48 w-2/3 object-cover object-center"
+            className="h-48 w-full object-cover object-center"
             src={"/images/" + planetName + ".svg"}
             alt={planetName}
           />

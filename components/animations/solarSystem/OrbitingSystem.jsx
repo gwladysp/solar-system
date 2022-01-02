@@ -19,9 +19,9 @@ function OrbitingSystem({ planet, allPlanets }) {
         />
         {allPlanets.map((planets) => (
           <OrbitingPlanet
-            key={"orbiting-" + planets.englishName}
+            key={"orbiting-" + planets.name}
             planet={planets}
-            isActive={planets.englishName === planet.englishName}
+            isActive={planets.name === planet.name}
           />
         ))}
         <AsteroidBelt />

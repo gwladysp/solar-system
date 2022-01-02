@@ -7,7 +7,7 @@ import {
 function OrbitingSystem({ planet, isActive }) {
   let planetSize = (planet.meanRadius / SOLAR_SIZE_IN_KM) * 400;
   let speed = planet.sideralOrbit / 100;
-  const bgImage = "/images/" + planet.englishName + ".svg";
+  const bgImage = "/images/" + planet.name + ".svg";
 
   const hasRing = PLANETS_WITH_RING.includes(planet.id);
   const ringColor = {
@@ -16,12 +16,12 @@ function OrbitingSystem({ planet, isActive }) {
   };
 
   const sunDistance = {
-    mercure: 15,
+    mercury: 15,
     venus: 23,
-    terre: 32,
+    earth: 32,
     mars: 40,
     jupiter: 61,
-    saturne: 69,
+    saturn: 69,
     uranus: 77,
     neptune: 85,
   };
@@ -72,7 +72,7 @@ function OrbitingSystem({ planet, isActive }) {
             className="relative z-10"
             style={{ top: `-${planetSize / 2 + 1}vw` }}
           >
-            {planet.englishName}
+            {planet.name}
           </p>
         </div>
       </div>
