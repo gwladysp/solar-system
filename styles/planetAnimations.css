@@ -25,12 +25,12 @@
 
 #sun {
   background-color: #fb7209;
-  box-shadow: 0 0 60px rgba(255, 160, 60, 0.4),
-    inset -25px -20px 80px rgba(0, 0, 0, 0.6);
+  box-shadow: inset -25px -20px 80px rgba(0, 0, 0, 0.6);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   transform: rotateX(-85deg);
+  animation: glowing 2s infinite linear;
 }
 
 .pos {
@@ -140,5 +140,22 @@
   }
   to {
     background-position-x: 300px;
+  }
+}
+
+.no-3d {
+  transform-style: flat !important;
+  transform: rotate(0) !important;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 20px 0 #ffb338;
+  }
+  50% {
+    box-shadow: 0 0 40px 0 #ffb338;
+  }
+  100% {
+    box-shadow: 0 0 20px 0 #ffb338;
   }
 }
