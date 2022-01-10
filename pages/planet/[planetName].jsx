@@ -11,8 +11,6 @@ import { planets } from "../../data/planets";
 function PlanetName() {
   const router = useRouter();
   const { planetName } = router.query;
-  console.log(planetName);
-
   if (planetName === undefined) {
     return <Loading />;
   }
@@ -30,46 +28,68 @@ function PlanetName() {
   }
   return (
     <>
-      <div className="flex justify-between max-w-screen-xl mx-auto items-center my-16 text-lg">
+      <div className="flex justify-between max-w-screen-xl mx-auto items-center m-16 text-lg">
         <div className="max-w-md">
           <h1 className="my-12">{planetNameFormatted}</h1>
           <div>
-            <a
-              className="p-4 border-b-1 border-white flex items-center"
-              href="#solarSystem"
-            >
-              <img
-                className="h-6 w-6 mr-8 rounded-full object-cover"
-                src="/images/sun.svg"
-                alt="Sun"
-              />
-              View in the solar system
-            </a>
-            <a
-              className="p-4 border-b-1 border-white flex items-center"
-              href="#moreStatistics"
-            >
-              <img
-                className="h-6 w-6 mr-8 text-white"
-                src="/images/chart.svg"
-                alt="Sun"
-              />
-              More stats
-            </a>
-            <a
-              className="p-4 border-1 border-white flex items-center"
-              href="#moons"
-            >
-              <img className="h-6 mr-8" src="/images/moon.svg" alt="Moon" />
-              Moons
-            </a>
+            <p>{ planet.description }</p>
+            <div className="mt-8 text-gray-300">
+              <a
+                  className="p-2 border-b-1 border-white flex items-center"
+                  href="#solarSystem"
+              >
+                <img
+                    className="h-6 w-6 mr-8 rounded-full object-cover"
+                    src="/images/sun.svg"
+                    alt="Sun"
+                />
+                View in the solar system
+              </a>
+              <a
+                  className="p-2 border-b-1 border-white flex items-center"
+                  href="#moreStatistics"
+              >
+                <img
+                    className="h-6 w-6 mr-8 text-white"
+                    src="/images/chart.svg"
+                    alt="Sun"
+                />
+                More stats
+              </a>
+              <a
+                  className="p-2 border-1 border-white flex items-center"
+                  href="#moons"
+              >
+                <img className="h-6 mr-8" src="/images/moon.svg" alt="Moon" />
+                Moons
+              </a>
+            </div>
           </div>
         </div>
-        <RotatingPlanet planet={planet} />
+        <RotatingPlanet planet={planet} size={20}/>
       </div>
       <div className="max-w-screen-xl mx-auto my-16">
         <PlanetMainStats planet={planet} />
-        <hr className="my-16" />
+        <hr className="mt-16" />
+
+        {planet.specialFactName ?
+           <div className="flex justify-center items-center pt-16 mx-16">
+             <span className="uppercase text-4xl relative left-[8rem] w-0 vertical-text rotate-180 opacity-25">Special fact</span>
+
+             <div className="mx-auto text-center">
+               <h2>{planet.specialFactName}</h2>
+               <p className="pt-8 max-w-2xl">{planet.specialFactDescription}</p>
+               <img
+                   className="h-48 mx-auto mt-12"
+                   src={`/images/${planetNameFormatted}.svg`}
+                   alt="Moon"
+               />
+             </div>
+           </div>
+        : ""}
+
+        <hr className="mt-16" />
+
         <div className="mx-16 pt-16" id="solarSystem">
           <h2 className="text-center">
             {planetNameFormatted} into our Solar System
@@ -99,32 +119,29 @@ function PlanetName() {
             />
             <div>
               <p className="block">
-                {planetNameFormatted} owns{" "}
-                {planet.moons ? planet.moons.length : "no"} moons.
+                {planet.moons ?
+                    planetNameFormatted + " owns " + planet.moons.length + (planet.moons.length > 1 ? " moons." : " moon.")
+                :
+                    planetNameFormatted + "owns no moons."
+                }
               </p>
-              <p>
-                {planet.moons
-                  ? "(" +
-                    planet.moons.map((moon, i) => {
-                      return (i === 0 ? "" : " ") + moon.moon;
-                    }) +
-                    ")"
-                  : ""}
-              </p>
+              {planet.moons ?
+                  <p className="flex flex-wrap ml-[-0.75rem]">
+                    {planet.moons.map(moon => {
+                      return <span className="rounded-md px-4 py-1 mx-2 mt-2 bg-blue-900 text-sm">{moon}</span>;
+                    })}
+                  </p>
+              : ""}
+
             </div>
           </div>
         </div>
 
         <div className="flex max-w-md items-center mx-auto">
           {planet.discoveredBy
-            ? "<p>" +
-              planetNameFormatted +
-              "has been discovered in" +
-              planet.discoveryDate +
-              "by" +
-              planet.discoveredBy +
-              "." +
-              "</p>"
+            ? <p className="mr-8">
+                {planetNameFormatted} has been discovered in {planet.discoveryDate} by {planet.discoveredBy}.
+              </p>
             : ""}
           <img
             className="h-auto w-1/4 mx-auto"
