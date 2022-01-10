@@ -9,7 +9,7 @@ const PLANETS_NAMES = [
   "venus",
 ];
 
-export const PLANETS_WITH_RING = ["saturne", "uranus"];
+export const PLANETS_WITH_RING = ["saturn", "uranus"];
 
 export const UNITY_CONVERSION_AU_TO_KM = 0.00000000668;
 export const UNITY_CONVERSION_KELVIN_TO_CELSIUS = 273.15;
