@@ -34,12 +34,6 @@ h2 {
   transform-style: preserve-3d;
 }
 
-.planet,
-.clouds {
-  width: 400px;
-  height: 400px;
-}
-
 .planet {
   border-radius: 50%;
   overflow: hidden;
@@ -63,13 +57,12 @@ h2 {
 }
 
 .planet-ring {
-  width: 160%;
-  height: 160%;
-  border: solid 60px;
+  width: 140%;
+  height: 140%;
   opacity: 40%;
   border-radius: 50%;
-  top: -25%;
-  left: -30%;
+  top: -20%;
+  left:-20%;
   position: absolute;
   transform: rotate3d(0.8, 0.2, 0, 75deg);
   box-sizing: border-box;
@@ -78,4 +71,24 @@ h2 {
 .planet-moons:hover {
   transition: transform 2s;
   transform: scale(1.25) rotate(360deg);
+}
+
+.sun-glowing {
+  animation: glow 3s infinite;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 60px rgba(255, 160, 60, 0.4),
+    inset -25px -20px 80px rgba(0, 0, 0, 0.6);
+  }
+  to {
+    box-shadow: 0 0 60px rgba(255, 160, 60, 0.4),
+    inset -25px -20px 80px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }

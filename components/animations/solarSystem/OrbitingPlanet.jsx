@@ -60,7 +60,7 @@ function OrbitingSystem({ planet, isActive }) {
                 filter: !isActive ? "grayscale(100%)" : "",
                 top: `0.5vw`,
                 left: `0.1vw`,
-                borderWidth: `10px`,
+                borderWidth: `16px`,
                 width: `${planetSize * 2}vw`,
               }}
             />
