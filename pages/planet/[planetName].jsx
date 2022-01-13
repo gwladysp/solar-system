@@ -7,6 +7,7 @@ import PlanetAdditionalStats from "../../components/elements/PlanetAdditionalSta
 import Loading from "../../components/animations/Loading";
 import { useRouter } from "next/router";
 import { planets } from "../../data/planets";
+import AnchorLink from "../../components/AnchorLink";
 
 function PlanetName() {
   const router = useRouter();
@@ -33,37 +34,11 @@ function PlanetName() {
           <h1 className="my-12">{planetNameFormatted}</h1>
           <div>
             <p>{ planet.description }</p>
-            <div className="mt-8 text-gray-300">
-              <a
-                  className="p-2 border-b-1 border-white flex items-center"
-                  href="#solarSystem"
-              >
-                <img
-                    className="h-6 w-6 mr-8 rounded-full object-cover"
-                    src="/images/sun.svg"
-                    alt="Sun"
-                />
-                View in the solar system
-              </a>
-              <a
-                  className="p-2 border-b-1 border-white flex items-center"
-                  href="#moreStatistics"
-              >
-                <img
-                    className="h-6 w-6 mr-8 text-white"
-                    src="/images/chart.svg"
-                    alt="Sun"
-                />
-                More stats
-              </a>
-              <a
-                  className="p-2 border-1 border-white flex items-center"
-                  href="#moons"
-              >
-                <img className="h-6 mr-8" src="/images/moon.svg" alt="Moon" />
-                Moons
-              </a>
-            </div>
+            <ul className="mt-8 text-gray-300">
+              <AnchorLink anchor="#solarSystem" text="View in the solar system" imageAlt="Sun" imageName="sun.svg"/>
+              <AnchorLink anchor="#moreStatistics" text="More stats" imageAlt="More stats" imageName="chart.svg"/>
+              <AnchorLink anchor="#moons" text="Moons" imageAlt="Moon" imageName="moon.svg"/>
+            </ul>
           </div>
         </div>
         <RotatingPlanet planet={planet} size={20}/>
