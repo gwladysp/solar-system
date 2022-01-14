@@ -1,32 +1,7 @@
-<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_4_13)">
-<rect width="200" height="200" rx="100" fill="#AC1500"/>
-<circle cx="88" cy="77" r="105" fill="#D63300"/>
-<g clip-path="url(#clip1_4_13)">
-<rect x="25" y="51.8707" width="64" height="64" rx="32" transform="rotate(-15.2841 25 51.8707)" fill="#750E00"/>
-<ellipse cx="59.6138" cy="65.2772" rx="35" ry="37.3729" transform="rotate(-15.2841 59.6138 65.2772)" fill="#AC1500"/>
-</g>
-<g clip-path="url(#clip2_4_13)">
-<rect x="115" y="42.0676" width="38.192" height="36.8426" rx="18.4213" transform="rotate(-15.2841 115 42.0676)" fill="#7F0F00"/>
-<ellipse cx="132.879" cy="46.1527" rx="22.5" ry="24.0254" transform="rotate(-15.2841 132.879 46.1527)" fill="#AC1500"/>
-</g>
-<g clip-path="url(#clip3_4_13)">
-<rect x="99" y="114.272" width="20" height="21.6115" rx="10" transform="rotate(-15.2841 99 114.272)" fill="#7F0F00"/>
-<ellipse cx="105.692" cy="115.405" rx="15" ry="16.0169" transform="rotate(-15.2841 105.692 115.405)" fill="#AC1500"/>
-</g>
-</g>
-<defs>
-<clipPath id="clip0_4_13">
-<rect width="200" height="200" rx="100" fill="white"/>
-</clipPath>
-<clipPath id="clip1_4_13">
-<rect x="25" y="51.8707" width="64" height="64" rx="32" transform="rotate(-15.2841 25 51.8707)" fill="white"/>
-</clipPath>
-<clipPath id="clip2_4_13">
-<rect x="115" y="42.0676" width="38.192" height="36.8426" rx="18.4213" transform="rotate(-15.2841 115 42.0676)" fill="white"/>
-</clipPath>
-<clipPath id="clip3_4_13">
-<rect x="99" y="114.272" width="20" height="21.6115" rx="10" transform="rotate(-15.2841 99 114.272)" fill="white"/>
-</clipPath>
-</defs>
+<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="22.0698" cy="21.0698" r="5" transform="rotate(-46.0864 22.0698 21.0698)" fill="white"/>
+    <circle cx="36.5349" cy="34.535" r="2.5" transform="rotate(-46.0864 36.5349 34.535)" fill="white"/>
+    <circle cx="11.5349" cy="16.535" r="2.5" transform="rotate(-46.0864 11.5349 16.535)" fill="white"/>
+    <path d="M29.8918 13.9585C33.7191 17.6433 36.2852 21.8778 37.3567 25.7251C38.4318 29.5851 37.9837 32.9562 35.9538 35.0645C33.924 37.1728 30.5723 37.7485 26.6743 36.8205C22.7891 35.8955 18.4605 33.4918 14.6332 29.807C10.8059 26.1222 8.23984 21.8878 7.16827 18.0405C6.09317 14.1805 6.54131 10.8093 8.57115 8.70102C10.601 6.59271 13.9527 6.01708 17.8507 6.94507C21.7359 7.87001 26.0645 10.2737 29.8918 13.9585Z" stroke="white"/>
+    <path d="M27.3775 16.0076C30.0407 18.5717 31.8207 21.5133 32.5625 24.1764C33.3078 26.8522 32.986 29.1477 31.6169 30.5697C30.2478 31.9917 27.9661 32.4003 25.264 31.757C22.5747 31.1167 19.5677 29.4495 16.9045 26.8854C14.2413 24.3213 12.4613 21.3797 11.7196 18.7167C10.9743 16.0409 11.2961 13.7453 12.6651 12.3233C14.0342 10.9013 16.3159 10.4927 19.018 11.136C21.7073 11.7763 24.7143 13.4435 27.3775 16.0076Z" stroke="white"/>
 </svg>

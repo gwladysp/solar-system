@@ -1,0 +1,32 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_4_13)">
+<rect width="200" height="200" rx="100" fill="#AC1500"/>
+<circle cx="88" cy="77" r="105" fill="#D63300"/>
+<g clip-path="url(#clip1_4_13)">
+<rect x="25" y="51.8707" width="64" height="64" rx="32" transform="rotate(-15.2841 25 51.8707)" fill="#750E00"/>
+<ellipse cx="59.6138" cy="65.2772" rx="35" ry="37.3729" transform="rotate(-15.2841 59.6138 65.2772)" fill="#AC1500"/>
+</g>
+<g clip-path="url(#clip2_4_13)">
+<rect x="115" y="42.0676" width="38.192" height="36.8426" rx="18.4213" transform="rotate(-15.2841 115 42.0676)" fill="#7F0F00"/>
+<ellipse cx="132.879" cy="46.1527" rx="22.5" ry="24.0254" transform="rotate(-15.2841 132.879 46.1527)" fill="#AC1500"/>
+</g>
+<g clip-path="url(#clip3_4_13)">
+<rect x="99" y="114.272" width="20" height="21.6115" rx="10" transform="rotate(-15.2841 99 114.272)" fill="#7F0F00"/>
+<ellipse cx="105.692" cy="115.405" rx="15" ry="16.0169" transform="rotate(-15.2841 105.692 115.405)" fill="#AC1500"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_4_13">
+<rect width="200" height="200" rx="100" fill="white"/>
+</clipPath>
+<clipPath id="clip1_4_13">
+<rect x="25" y="51.8707" width="64" height="64" rx="32" transform="rotate(-15.2841 25 51.8707)" fill="white"/>
+</clipPath>
+<clipPath id="clip2_4_13">
+<rect x="115" y="42.0676" width="38.192" height="36.8426" rx="18.4213" transform="rotate(-15.2841 115 42.0676)" fill="white"/>
+</clipPath>
+<clipPath id="clip3_4_13">
+<rect x="99" y="114.272" width="20" height="21.6115" rx="10" transform="rotate(-15.2841 99 114.272)" fill="white"/>
+</clipPath>
+</defs>
+</svg>
