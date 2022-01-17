@@ -2,7 +2,37 @@
 export const moon = {
     "id": "moon",
     "name": "Moon",
-    "description": "",
+    "description": "The Moon is the only natural satellite of the earth. His size is comparable to the width of China. That rounded rock is the only extra-terrestrial object where humans put a foot.",
+    "composition": [
+        {
+            "element": "silica",
+            "percentage": 45
+        },
+        {
+            "element": "alumina",
+            "percentage": 15
+        },
+        {
+            "element": "iron",
+            "percentage": 14
+        },
+        {
+            "element": "lime",
+            "percentage": 12
+        },
+        {
+            "element": "magnesia",
+            "percentage": 9
+        },
+        {
+            "element": "titanium dioxide",
+            "percentage": 4
+        },
+        {
+            "element": "sodium oxide",
+            "percentage": 1
+        }
+    ],
     "moons": null,
     "semimajorAxis": 384400,
     "perihelion": 363300,
