@@ -2,7 +2,7 @@ function StatsElement(props) {
   const { element } = props;
   return (
     <>
-      <div className="px-4 py-5 sm:p-6 bg-blue-900">
+      <div className="px-4 py-5 sm:p-6 bg-blue">
         <dt className="text-base font-normal text-gray-200">
           <span className="planet-info-title block">{element.title}</span>
         </dt>

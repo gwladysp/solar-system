@@ -8,7 +8,7 @@ import {
   Cell,
   Bar,
 } from "recharts";
-import Loading from "./Loading";
+import Loading from "../animations/Loading";
 
 function Graph({ planet, allPlanets, dataSorting, dataUnity }) {
   const data = allPlanets;

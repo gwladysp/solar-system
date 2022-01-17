@@ -14,7 +14,7 @@ function PlanetAdditionalStats({ planet }) {
 
   return (
     <>
-      <dl className="mt-5 grid grid-cols-1 bg-blue-80 overflow-hidden shadow divide-y divide-gray-200 md:grid-cols-3 md:divide-y-0 md:divide-x mt-16 rounded-lg pt-16">
+      <dl className="mt-5 grid grid-cols-1 bg-blue-80 overflow-hidden shadow divide-y divide-blue-dark md:grid-cols-3 md:divide-y-0 md:divide-x mt-16 rounded-lg pt-16">
         {elements.map((element) => {
           return <StatsElement element={element} key={element.value} />;
         })}

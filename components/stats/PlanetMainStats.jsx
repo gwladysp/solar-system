@@ -1,5 +1,5 @@
 import StatsElement from "./StatsElement";
-import { UNITY_CONVERSION_KELVIN_TO_CELSIUS } from "../../src/constants";
+import { UNITY_CONVERSION_KELVIN_TO_CELSIUS } from "../../data/constants";
 
 function PlanetMainStats({ planet }) {
   const elements = [
@@ -28,7 +28,7 @@ function PlanetMainStats({ planet }) {
 
   return (
     <>
-      <dl className="mt-5 grid grid-cols-1 rounded-lg bg-blue-80 overflow-hidden shadow divide-y divide-gray-200 md:grid-cols-4 md:divide-y-0 md:divide-x">
+      <dl className="mt-5 grid grid-cols-1 rounded-lg bg-blue-80 overflow-hidden shadow divide-y divide-blue-dark md:grid-cols-4 md:divide-y-0 md:divide-x">
         {elements.map((element) => {
           return <StatsElement element={element} key={element.value} />;
         })}

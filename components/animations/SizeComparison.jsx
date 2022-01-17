@@ -1,6 +1,6 @@
-import RotatingPlanet from "./animations/RotatingPlanet";
-import Sun from "./animations/Sun";
-import Loading from "./animations/Loading";
+import RotatingPlanet from "./RotatingPlanet";
+import Sun from "./Sun";
+import Loading from "./Loading";
 
 function SizeComparison({sun, planets}) {
 

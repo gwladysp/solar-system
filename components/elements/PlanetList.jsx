@@ -1,5 +1,5 @@
 import PlanetCard from "./PlanetCard";
-import Loading from "./animations/Loading";
+import Loading from "../animations/Loading";
 
 function PlanetList({ title, planets }) {
   if (planets === null) {
