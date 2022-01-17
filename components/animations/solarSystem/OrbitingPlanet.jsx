@@ -2,7 +2,7 @@ import {
   PLANETS_WITH_RING,
   SOLAR_SIZE_IN_EM,
   SOLAR_SIZE_IN_KM,
-} from "../../../src/constants";
+} from "../../../data/constants";
 
 function OrbitingSystem({ planet, isActive }) {
   let planetSize = (planet.meanRadius / SOLAR_SIZE_IN_KM) * 400;
