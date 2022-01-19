@@ -38,7 +38,7 @@ export default function Navbar() {
                         </Link>
                         <div className="hidden md:flex items-center justify-between gap-8">
                             {navigation.map((item) => (
-                                <Link href={item.href} className="mx-12 text-xl font-semibold cursor-pointer">
+                                <Link href={item.href} className="mx-12 text-xl font-semibold cursor-pointer" key={item.name}>
                                     <div className="flex items-center justify-between cursor-pointer">
                                         <img
                                             className="h-8 w-8 object-cover"
@@ -62,7 +62,7 @@ export default function Navbar() {
                     {/* Mobile navigation display */}
                     <div className={`items-center justify-between bg-blue-dark z-10 w-full left-0 border-b-2 border-blue pb-4 ${open ? 'absolute' : 'hidden'}`}>
                         {navigation.map((item) => (
-                            <Link href={item.href} className="text-xl font-semibold cursor-pointer cursor-pointer">
+                            <Link href={item.href} className="text-xl font-semibold cursor-pointer cursor-pointer" key={item.name}>
                                 <div className="flex items-center justify-start ml-8 pt-2">
                                     <img
                                         className="h-8 w-8 object-cover"
