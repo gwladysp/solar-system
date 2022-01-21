@@ -11,7 +11,7 @@ function RotatingPlanet({ planet, size }) {
   return (
     <>
       <div className="rotating-planet-container">
-        <div className="planet" style={{ backgroundImage: `url(${bgImage})`,
+        <div className="planet mx-auto" style={{ backgroundImage: `url(${bgImage})`,
           width: `${size}vw`,
           height: `${size}vw`
         }}>
