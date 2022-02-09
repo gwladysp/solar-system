@@ -1,12 +1,17 @@
-import Head from "next/head";
-import Image from "next/image";
-import HeroSection from "../components/HeroSection.jsx";
+import System from "../components/threeJS/system";
 
 export default function Home() {
-  return (
-    <>
-      <h1>Home</h1>
-      <HeroSection />
-    </>
-  );
+    return (
+        <>
+
+            <div
+                className="h-[90vh] bg-black"
+                style={{
+                    backgroundImage: `url('https://ak.picdn.net/shutterstock/videos/494608/thumb/1.jpg?ip=x480')`,
+                }}
+            >
+                <System/>
+            </div>
+        </>
+    );
 }
