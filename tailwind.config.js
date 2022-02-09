@@ -13,6 +13,28 @@ module.exports = {
           dark: "#001736",
         },
       },
+      keyframes: {
+        'rotate-45deg': {
+          '0%': {
+            transform: 'rotate(0deg)'
+          },
+          '100%': {
+            transform: 'rotate(45deg)'
+          },
+        },
+        'rotate-135deg': {
+          '0%': {
+            transform: 'rotate(0deg)'
+          },
+          '100%': {
+            transform: 'rotate(-45deg)'
+          },
+        },
+      },
+      animation: {
+        'rotate-45deg': 'rotate-45deg 0.5s forwards',
+        'rotate-135deg': 'rotate-135deg 0.5s forwards',
+      }
     },
   },
   plugins: [],
