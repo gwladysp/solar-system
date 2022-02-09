@@ -12,5 +12,5 @@
 - ThreeJS
 - TailwindCSS
 
-Data is from The Solar System OpenData API.
-Texts and illustrations are from
+Data are from The Solar System OpenData API.
+Texts and illustrations are self-made.
