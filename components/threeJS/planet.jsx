@@ -82,7 +82,7 @@ export default function Planet({planet, radius, selectedPlanet, setSelectedPlane
             </group>
             <Suspense fallback={null}>
                 {PLANETS_WITH_RING.includes(planet.id) &&
-                <PlanetRing position={[x, 0, z]} radius={size}/>
+                <PlanetRing planetName={planet.id} position={[x, 0, z]} radius={size}/>
                 }
                 {planet.id === "earth" &&
                 <Moon position={{'x': x, 'z' : z}} planetRadius={size}/>

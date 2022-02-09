@@ -2,10 +2,9 @@ import React, {useRef} from "react";
 import {DoubleSide, TextureLoader} from "three";
 import {useLoader} from "@react-three/fiber";
 
-export default function PlanetRing({position, radius = 1}) {
+export default function PlanetRing({planetName, position, radius = 1}) {
     const mesh = useRef();
-    const texture = useLoader(TextureLoader, "https://pngimage.net/wp-content/uploads/2018/06/planet-ring-png-7.png");
-
+    const texture = useLoader(TextureLoader, "/images/" + planetName + "-ring.svg");
     return (
         <mesh
             position={position}
