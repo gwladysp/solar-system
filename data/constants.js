@@ -3,10 +3,23 @@ export const PLANETS_NAMES = [
   "neptune",
   "jupiter",
   "mars",
-  "mercure",
-  "saturne",
-  "terre",
+  "mercury",
+  "saturn",
+  "earth",
   "venus",
+];
+
+export const ALL_BODIES_NAMES = [
+  "uranus",
+  "neptune",
+  "jupiter",
+  "mars",
+  "mercury",
+  "saturn",
+  "earth",
+  "venus",
+  "sun",
+  "moon"
 ];
 
 export const PLANETS_SPECIAL_FACT_PHOTO_DESCRIPTION = {

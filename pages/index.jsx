@@ -1,4 +1,4 @@
-import System from "../components/threeJS/system";
+import System from "../components/threeJS/System";
 
 export default function Home() {
     return (
