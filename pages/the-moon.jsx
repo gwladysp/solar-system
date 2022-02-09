@@ -2,11 +2,29 @@ import {moon} from '../data/the-moon.js'
 import {planets} from '../data/planets.js'
 import PlanetAdditionalStats from "../components/stats/PlanetAdditionalStats";
 import PlanetMainStats from "../components/stats/PlanetMainStats";
-import OrbitingMoon from "../components/animations/OrbitingMoon";
 import Loading from "../components/animations/Loading";
 import CompositionGraph from "../components/graph/CompositionGraph";
 import Image from "../components/animations/Image";
 import AnchorLink from "../components/elements/AnchorLink";
+import RotatingPlanet from "../components/animations/RotatingPlanet";
+import OrbitingPlanet from "../components/animations/solarSystem/OrbitingPlanet";
+
+function OrbitingMoon({ planet, moon }) {
+    return (
+        <>
+            <div className="w-1/3">
+                <RotatingPlanet planet={planet} size={5} />
+                <div className="relative top-[-2.4rem] child-noanimation moon-rotate-position">
+                    <OrbitingPlanet
+                        planet={moon}
+                        animationDuration={50}
+                        size={2}
+                    />
+                </div>
+            </div>
+        </>
+    );
+}
 
 export default function TheMoon() {
     let earth = {}
