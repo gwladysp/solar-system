@@ -24,8 +24,7 @@ function PlanetCard(props) {
                 {planetName.charAt(0).toUpperCase() + planetName.slice(1)}
               </p>
               <p className="mt-3 text-base text-gray-500">
-                Short planet description of approximatly two or three lines
-                giving basics informations about the planet
+                {planet.description}..
               </p>
             </div>
             <button
