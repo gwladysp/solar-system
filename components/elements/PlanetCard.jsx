@@ -12,7 +12,7 @@ function PlanetCard(props) {
         <div className="flex-shrink-0">
           <img
             className="h-48 w-full object-cover object-center"
-            src={"/images/" + planetName + ".svg"}
+            src={"/images/" + planetName.toLowerCase() + ".svg"}
             alt={planetName}
           />
         </div>
