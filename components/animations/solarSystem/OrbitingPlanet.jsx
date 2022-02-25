@@ -7,7 +7,7 @@ import {
 function OrbitingSystem({ planet, isActive }) {
   let planetSize = (planet.meanRadius / SOLAR_SIZE_IN_KM) * 400;
   let speed = planet.sideralOrbit / 100;
-  const bgImage = "/images/" + planet.name + ".svg";
+  const bgImage = "/images/" + planet.name.toLowerCase() + ".svg";
 
   const hasRing = PLANETS_WITH_RING.includes(planet.id);
   const ringColor = {

@@ -10,7 +10,7 @@ import Moon from "./Moon";
 
 export default function Planet({planet, radius, selectedPlanet, setSelectedPlanet}) {
     const [isHovered, setHovered] = useState(false)
-    const texture = useLoader(TextureLoader, `images/${planet.id}.svg`);
+    const texture = useLoader(TextureLoader, `images/${planet.id.toLowerCase()}.svg`);
     const mesh = useRef()
     let size = planet.meanRadius / 1200
 

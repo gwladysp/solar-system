@@ -4,7 +4,7 @@ import {useLoader} from "@react-three/fiber";
 
 export default function PlanetRing({planetName, position, radius = 1}) {
     const mesh = useRef();
-    const texture = useLoader(TextureLoader, "/images/" + planetName + "-ring.svg");
+    const texture = useLoader(TextureLoader, "/images/" + planetName.toLowerCase() + "-ring.svg");
     return (
         <mesh
             position={position}
