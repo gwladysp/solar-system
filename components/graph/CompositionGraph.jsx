@@ -32,9 +32,9 @@ function Graph({ planet }) {
             </div>
             <span className="block w-full text-center text-[#c27346]">
                 {planet.name} composition
-                {planet.id === "sun" ?
+                {planet.id === "sun" &&
                     <span className="block text-sm text-gray-600">"others" refers to iron, neon, nitrogen, silicon, magnesium and sulphur.</span>
-                : ""}
+                }
             </span>
         </>
     );

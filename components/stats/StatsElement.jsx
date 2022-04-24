@@ -10,9 +10,7 @@ function StatsElement(props) {
           <div className="flex items-baseline text-2xl font-semibold text-dark-blue">
             {element.value} {element.sup ? <sup>{element.sup}</sup> : ""}
             {" " + element.unity}
-            {element.conversion && element.conversion_unity
-              ? " (" + element.conversion + " " + element.conversion_unity + ")"
-              : ""}
+            {element.conversion && element.conversion_unity && " (" + element.conversion + " " + element.conversion_unity + ")"}
           </div>
         </dd>
       </div>

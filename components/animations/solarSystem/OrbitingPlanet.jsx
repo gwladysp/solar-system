@@ -4,9 +4,9 @@ import {
   SOLAR_SIZE_IN_KM,
 } from "../../../data/constants";
 
-function OrbitingSystem({ planet, isActive }) {
-  let planetSize = (planet.meanRadius / SOLAR_SIZE_IN_KM) * 400;
-  let speed = planet.sideralOrbit / 100;
+function OrbitingSystem({ planet, isActive, size = null, animationDuration = null }) {
+  let planetSize = size ? size : (planet.meanRadius / SOLAR_SIZE_IN_KM) * 400;
+  let speed = animationDuration ? animationDuration : planet.sideralOrbit / 100;
   const bgImage = "/images/" + planet.name + ".svg";
 
   const hasRing = PLANETS_WITH_RING.includes(planet.id);
@@ -52,7 +52,7 @@ function OrbitingSystem({ planet, isActive }) {
               filter: !isActive ? "grayscale(100%)" : "",
             }}
           />
-          {hasRing ? (
+          {hasRing && (
             <div
               className="planet-ring orbiting-ring"
               style={{
@@ -64,8 +64,6 @@ function OrbitingSystem({ planet, isActive }) {
                 width: `${planetSize * 2}vw`,
               }}
             />
-          ) : (
-            ""
           )}
 
           <p

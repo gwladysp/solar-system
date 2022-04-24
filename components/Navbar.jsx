@@ -51,12 +51,10 @@ export default function Navbar() {
                             ))}
                         </div>
                         {/* Mobile opener button */}
-                        <button className="md:hidden" onClick={() => setOpen(!open)}>
-                            {open ?
-                                <span>X</span>
-                                :
-                                <span>Open</span>
-                            }
+                        <button className="md:hidden flex flex-col gap-2 animate-fade-in-down" onClick={() => setOpen(!open)}>
+                                    <span className={`w-8 bg-white h-1 block ${open && 'animate-rotate-45deg relative top-[0.75rem]'}`}></span>
+                                    <span className={`w-8 bg-white h-1 block ${open && 'bg-transparent'}`}></span>
+                                    <span className={`w-8 bg-white h-1 block ${open && 'animate-rotate-135deg relative top-[-0.75rem]'}`}></span>
                         </button>
                     </div>
                     {/* Mobile navigation display */}

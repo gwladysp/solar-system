@@ -22,15 +22,13 @@ function RotatingPlanet({ planet, size }) {
               height: `${size}vw`}}
           />
         </div>
-        {hasRing ? (
+        {hasRing && (
           <div
             className="planet-ring"
             style={{ borderColor: `${ringColor[planet.id]}`,
               border: `solid ${size / 10}vw`
             }}
           />
-        ) : (
-          ""
         )}
       </div>
     </>
