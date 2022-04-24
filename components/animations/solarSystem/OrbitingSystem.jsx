@@ -24,7 +24,8 @@ function OrbitingSystem({ planet, allPlanets }) {
             isActive={planets.name === planet.name}
           />
         ))}
-        <AsteroidBelt />
+        <AsteroidBelt belt="main"/>
+        <AsteroidBelt/>
       </div>
     </>
   );

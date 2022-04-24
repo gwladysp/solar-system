@@ -1,16 +1,19 @@
-function AsteroidBelt() {
+function AsteroidBelt({ belt }) {
   return (
     <>
       <div
     className="orbit asteroid-belt"
     style={{
-        width: "45vw",
-        height: "45vw",
-        marginTop: "-22.5vw",
-        marginLeft: "-22.5vw",
-        animationDuration: "100s",
-        borderWidth: `4em`,
-        borderColor: `white`,
+        width: belt === "main" ? "60vw" : "120vw",
+        height: belt === "main" ? "60vw" : "120vw",
+        marginTop: belt === "main" ? "-30vw" : "-60vw",
+        marginLeft: belt === "main" ? "-30vw" : "-60vw",
+        animationDuration: "1000s",
+        borderWidth: `0`,
+        backgroundImage: `url("/images/asteroidBelt.svg")`,
+        borderColor: `transparent`,
+        backgroundPosition: `center`,
+        backgroundRepeat: `no-repeat`
     }}
     />
     </>
