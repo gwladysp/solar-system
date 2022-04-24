@@ -12,7 +12,7 @@ function PlanetCard(props) {
         <div className="flex-shrink-0">
           <img
             className="h-48 w-full object-cover object-center"
-            src={"/images/" + planetName + ".svg"}
+            src={"/images/" + planetName.toLowerCase() + ".svg"}
             alt={planetName}
           />
         </div>
@@ -24,8 +24,7 @@ function PlanetCard(props) {
                 {planetName.charAt(0).toUpperCase() + planetName.slice(1)}
               </p>
               <p className="mt-3 text-base text-gray-500">
-                Short planet description of approximatly two or three lines
-                giving basics informations about the planet
+                {planet.description}..
               </p>
             </div>
             <button
