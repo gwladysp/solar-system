@@ -41,7 +41,7 @@ function PlanetName() {
                                         imageName="logo.svg"/>
                             <AnchorLink anchor="#moreStatistics" text="More stats" imageAlt="More stats icon"
                                         imageName="icon-statistics.svg"/>
-                            <AnchorLink anchor="#moons" text="Moons" imageAlt="Moon" imageName="moon.svg"/>
+                            <AnchorLink anchor="#moons" text="Moons" imageAlt="Moon" imageName="icon-moon.svg"/>
                         </ul>
                     </div>
                 </div>
@@ -96,7 +96,7 @@ function PlanetName() {
                     <div className="flex flex-col md:flex-row items-center my-16 mx-auto">
                         <img
                             className="planet-moons h-32 md:mr-12"
-                            src="/images/moon.svg"
+                            src="/images/icon-moon.svg"
                             alt="Moon"
                         />
                         <div className="mt-8 md:mt-0">

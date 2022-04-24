@@ -11,7 +11,7 @@ export default function Navbar() {
         }, {
             name: 'The moon',
             href: '/the-moon',
-            icon: 'moon.svg',
+            icon: 'icon-moon.svg',
         }, {
             name: 'Planets',
             href: '/planets',

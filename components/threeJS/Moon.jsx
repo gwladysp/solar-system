@@ -5,7 +5,7 @@ import {moon} from "../../data/the-moon";
 
 export default function Moon({position, planetRadius}) {
     const mesh = useRef();
-    const texture = useLoader(TextureLoader, `images/moon.svg`);
+    const texture = useLoader(TextureLoader, `images/icon-moon.svg`);
     const size = moon.meanRadius / 1200;
     useFrame(() => {
         mesh.current.position.z += 1

@@ -52,7 +52,7 @@ export default function TheMoon() {
                         </p>
                         <ul className="mt-8 text-gray-300">
                             <AnchorLink anchor="#moonInfos" text="What's inside the moon?" imageAlt="Moon"
-                                        imageName="moon.svg"/>
+                                        imageName="icon-moon.svg"/>
                             <AnchorLink anchor="#explorationMissions" text="Moon exploration missions"
                                         imageAlt="Footprint icon" imageName="icon-footprint.svg"/>
                             <AnchorLink anchor="#moonEffects" text="Moon effects" imageAlt="Wave icon"
