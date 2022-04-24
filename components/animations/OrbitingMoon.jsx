@@ -2,7 +2,6 @@ import RotatingPlanet from "./RotatingPlanet";
 import OrbitingPlanet from "./solarSystem/OrbitingPlanet";
 
 function OrbitingMoon({ planet, moon }) {
-    const bgImage = "/images/" + planet.name.toLowerCase() + ".svg";
     return (
         <>
                 <div className="w-1/3">
