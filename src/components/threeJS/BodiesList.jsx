@@ -1,4 +1,4 @@
-import {ALL_BODIES_NAMES} from "../../data/constants";
+import {ALL_BODIES_NAMES} from "/src/data/constants";
 import { Html } from "@react-three/drei";
 import React, {Suspense, useRef, useState} from 'react'
 import { useThree } from "@react-three/fiber";

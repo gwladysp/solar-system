@@ -6,10 +6,10 @@ import PlanetSolarStats from "../../components/stats/PlanetSolarStats";
 import PlanetAdditionalStats from "../../components/stats/PlanetAdditionalStats";
 import Loading from "../../components/animations/Loading";
 import {useRouter} from "next/router";
-import {planets} from "../../data/planets";
+import {planets} from "/src/data/planets";
 import AnchorLink from "../../components/elements/AnchorLink";
 import Image from "../../components/animations/Image";
-import {PLANETS_SPECIAL_FACT_PHOTO_DESCRIPTION} from "../../data/constants";
+import {PLANETS_SPECIAL_FACT_PHOTO_DESCRIPTION} from "/src/data/constants";
 
 function PlanetName() {
     const router = useRouter();

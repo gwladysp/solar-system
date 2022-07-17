@@ -2,9 +2,9 @@ import React, {Suspense, useRef, useState} from 'react'
 import {Canvas} from '@react-three/fiber'
 import Planet from './planet.jsx'
 import {TrackballControls} from '@react-three/drei';
-import {planets} from "../../data/planets";
+import {planets} from "/src/data/planets";
 import PlanetInfo from "./PlanetInfo";
-import {sun} from "../../data/the-sun";
+import {sun} from "/src/data/the-sun";
 
 export default function System() {
     const [selectedPlanet, setSelectedPlanet] = useState(null)

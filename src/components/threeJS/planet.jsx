@@ -5,7 +5,7 @@ import {Html} from "@react-three/drei";
 import Ellipse from "./Ellipse";
 import PlanetInfo from "./PlanetInfo";
 import PlanetRing from "./PlanetRing";
-import {PLANETS_WITH_RING} from "../../data/constants";
+import {PLANETS_WITH_RING} from "/src/data/constants";
 import Moon from "./Moon";
 
 export default function Planet({planet, radius, selectedPlanet, setSelectedPlanet}) {

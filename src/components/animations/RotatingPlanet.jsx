@@ -1,4 +1,4 @@
-import { PLANETS_WITH_RING } from "../../data/constants";
+import { PLANETS_WITH_RING } from "/src/data/constants";
 
 function RotatingPlanet({ planet, size }) {
   const bgImage = "/images/" + planet.name.toLowerCase() + ".svg";

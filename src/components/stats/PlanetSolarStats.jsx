@@ -1,5 +1,5 @@
 import StatsElement from "./StatsElement";
-import { UNITY_CONVERSION_AU_TO_KM } from "../../data/constants";
+import { UNITY_CONVERSION_AU_TO_KM } from "/src/data/constants";
 
 function PlanetSolarStats({ planet }) {
   const elements = [

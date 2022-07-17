@@ -1,7 +1,7 @@
 import React, {useRef} from "react";
 import {TextureLoader} from "three";
 import {useFrame, useLoader} from "@react-three/fiber";
-import {moon} from "../../data/the-moon";
+import {moon} from "/src/data/the-moon";
 
 export default function Moon({position, planetRadius}) {
     const mesh = useRef();

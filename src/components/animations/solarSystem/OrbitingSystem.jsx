@@ -1,5 +1,5 @@
 import OrbitingPlanet from "./OrbitingPlanet";
-import { SOLAR_SIZE_IN_EM } from "../../../data/constants";
+import { SOLAR_SIZE_IN_EM } from "/src/data/constants";
 import Loading from "../Loading";
 import AsteroidBelt from "./AsteroidBelt";
 

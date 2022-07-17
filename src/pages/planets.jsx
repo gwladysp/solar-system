@@ -1,5 +1,5 @@
 import PlanetList from "../components/elements/PlanetList";
-import { planets } from "../data/planets";
+import { planets } from "/src/data/planets";
 
 function Planets() {
 

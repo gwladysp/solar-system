@@ -1,5 +1,5 @@
-import {sun} from '../data/the-sun.js'
-import {planets} from '../data/planets.js'
+import {sun} from "/src/data/the-sun.js"
+import {planets} from "/src/data/planets.js"
 import PlanetMainStats from "../components/stats/PlanetMainStats";
 import SizeComparison from "../components/animations/SizeComparison";
 import Sun from "../components/animations/Sun";

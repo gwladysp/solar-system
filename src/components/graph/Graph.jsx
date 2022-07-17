@@ -27,10 +27,11 @@ function Graph({ planet, allPlanets, dataSorting, dataUnity }) {
             <XAxis dataKey="name" tickFormatter={planetNameFormatter} />
             <YAxis />
             <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-            <Bar dataKey={dataSorting} barSize={30} fill="#000000">
+            <Bar dataKey={dataSorting} barSize={30} fill="#000000" animationDuration={2000}>
               {data.map((entry, index) => {
                 return (
                   <Cell
+
                     key={`cell-${index}`}
                     fill={
                       entry.name === planet.name

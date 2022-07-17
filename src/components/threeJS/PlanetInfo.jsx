@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { Html } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 import RotatingPlanet from "../animations/RotatingPlanet";
-import {PLANETS_NAMES} from "../../data/constants";
+import {PLANETS_NAMES} from "/src/data/constants";
 
 export default function PlanetInfo({ setSelectedPlanet, planet }) {
   const mesh = useRef();

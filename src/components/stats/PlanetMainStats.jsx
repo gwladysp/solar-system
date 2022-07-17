@@ -1,5 +1,5 @@
 import StatsElement from "./StatsElement";
-import { UNITY_CONVERSION_KELVIN_TO_CELSIUS } from "../../data/constants";
+import { UNITY_CONVERSION_KELVIN_TO_CELSIUS } from "/src/data/constants";
 
 function PlanetMainStats({ planet }) {
   const elements = [

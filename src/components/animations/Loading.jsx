@@ -1,4 +1,4 @@
-import { SOLAR_SIZE_IN_EM } from "../../data/constants";
+import { SOLAR_SIZE_IN_EM } from "/src/data/constants";
 
 function Loading() {
   return (

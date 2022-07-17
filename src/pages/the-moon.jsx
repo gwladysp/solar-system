@@ -1,5 +1,5 @@
-import {moon} from '../data/the-moon.js'
-import {planets} from '../data/planets.js'
+import {moon} from "/src/data/the-moon.js"
+import {planets} from "/src/data/planets.js"
 import PlanetAdditionalStats from "../components/stats/PlanetAdditionalStats";
 import PlanetMainStats from "../components/stats/PlanetMainStats";
 import Loading from "../components/animations/Loading";
